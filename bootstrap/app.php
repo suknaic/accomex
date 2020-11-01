@@ -12,7 +12,7 @@ $app = new \Slim\App([
 		'db' => [
 			'driver' 	=> 'mysql',
 			'host' 		=> 'localhost',
-			'database' 	=> 'eshop',
+			'database' 	=> 'accomex',
 			'username' 	=> 'root',
 			'password' 	=> '',
 			'charset' 	=> 'utf8',
@@ -20,7 +20,7 @@ $app = new \Slim\App([
 			'prefix'	=> '',
 		]
 	],
-	
+
 ]);
 
 $container = $app->getContainer();
@@ -36,28 +36,28 @@ $container['validator'] = function ($container) {
 };
 
 // add Illuminate package
-$container['db'] = function ($container) use ($capsule){
+$container['db'] = function ($container) use ($capsule) {
 	return $capsule;
 };
 
 // add Auth class
-$container['auth'] = function($container){
+$container['auth'] = function ($container) {
 	return new \App\Auth\Auth;
 };
 
 // add Slim Flash messages
 $container['flash'] = function () {
-    return new \Slim\Flash\Messages();
+	return new \Slim\Flash\Messages();
 };
 
 // add views to the application
-$container['view'] = function($container){
+$container['view'] = function ($container) {
 	$view = new \Slim\Views\Twig(__DIR__ . '/../resources/views', [
 		'cache' => false,
 	]);
 
 	$view->addExtension(new Slim\Views\TwigExtension(
-		$container->router, 
+		$container->router,
 		$container->request->getUri()
 	));
 
@@ -72,22 +72,22 @@ $container['view'] = function($container){
 
 	return $view;
 };
-
-$container['HomeController'] = function($container){
+// CONTAINER DE CONTROLLERES
+$container['HomeController'] = function ($container) {
 	return new \App\Controllers\HomeController($container);
 };
 
-$container['AuthController'] = function($container){
+$container['AuthController'] = function ($container) {
 	return new \App\Controllers\Auth\AuthController($container);
 };
 
 
-$container['PasswordController'] = function($container){
+$container['PasswordController'] = function ($container) {
 	return new \App\Controllers\Auth\PasswordController($container);
 };
 
 // add Slim CSRF
-$container['csrf'] = function($container){
+$container['csrf'] = function ($container) {
 	return new \Slim\Csrf\Guard;
 };
 
