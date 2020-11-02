@@ -90,6 +90,10 @@ $container['PainelController'] = function ($container) {
 	return new \App\Controllers\Dash\PainelController($container);
 };
 
+$container['EmpresaController'] = function ($container) {
+	return new \App\Controllers\Dash\EmpresaController($container);
+};
+
 // add Slim CSRF
 $container['csrf'] = function ($container) {
 	return new \Slim\Csrf\Guard;

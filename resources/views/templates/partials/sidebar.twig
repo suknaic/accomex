@@ -1,7 +1,7 @@
 <div class="sidebar">
 	<ul class="widget widget-menu unstyled">
 		<li class="active">
-			<a href="index.html">
+			<a href="{{path_for('auth.painel')}}">
 				<i class="menu-icon icon-dashboard"></i>INÍCIO
 			</a>
 		</li>
@@ -30,13 +30,15 @@
 			</a>
 			<ul id="toggleempresa" class="collapse unstyled">
 				<li>
-					<a href="other-login.html">
-						<i class="icon-inbox"></i>cadastrar
+					<a href="{{path_for('auth.painel.cempresa')}}">
+						<i class="icon-inbox"></i>
+						Cadastrar Nova
 					</a>
 				</li>
 				<li>
 					<a href="other-user-profile.html">
-						<i class="icon-inbox"></i>Ver Todas Empresas
+						<i class="icon-inbox"></i>
+						Ver Todas Empresas
 					</a>
 				</li>
 			</ul>
@@ -50,12 +52,14 @@
 			<ul id="toggleproduct" class="collapse unstyled">
 				<li>
 					<a href="other-login.html">
-						<i class="icon-inbox"></i>cadastrar
+						<i class="icon-inbox"></i>
+						Cadastrar Novo
 					</a>
 				</li>
 				<li>
 					<a href="other-user-profile.html">
-						<i class="icon-inbox"></i>Ver Todos Produtos
+						<i class="icon-inbox"></i>
+						Ver Todos Produtos
 					</a>
 				</li>
 			</ul>

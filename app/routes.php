@@ -25,7 +25,7 @@ $app->group('', function () {
 	$this->get('/painel', 'PainelController:index')->setName('auth.painel');
 
 	//ROTAS EMPRESA 
-	$this->get('/painel/cadastro-empresa', '')->setName('auth.painel.cempresa');
+	$this->get('/painel/cadastro-empresa', 'EmpresaController:index')->setName('auth.painel.cempresa');
 	// ROTAS PRODUTO
 	$this->get('/painel/cadastro-produto', '')->setName('auth.painel.cproduto');
 
