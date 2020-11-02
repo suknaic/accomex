@@ -86,6 +86,10 @@ $container['PasswordController'] = function ($container) {
 	return new \App\Controllers\Auth\PasswordController($container);
 };
 
+$container['PainelController'] = function ($container) {
+	return new \App\Controllers\Dash\PainelController($container);
+};
+
 // add Slim CSRF
 $container['csrf'] = function ($container) {
 	return new \Slim\Csrf\Guard;
