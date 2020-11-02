@@ -1,10 +1,27 @@
 (function ($) {
   "use strict";
+  //SECAO DO MAPA
 
-  var mymap = L.map("mapid").setView([51.505, -0.09], 13);
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $("#imagePreview").css(
+          "background-image",
+          "url(" + e.target.result + ")"
+        );
+        $("#imagePreview").hide();
+        $("#imagePreview").fadeIn(650);
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  $("#imageUpload").change(function () {
+    readURL(this);
+  });
 
   /*==================================================================
-    [ Validate ]*/
+    [ VALIDCACAO DO FORMULARIO DE  LOGIN]*/
   var input = $(".validate-input .input100");
 
   $(".validate-form").on("submit", function () {

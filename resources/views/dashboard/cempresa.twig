@@ -1,5 +1,128 @@
 {% extends 'templates/app.twig' %}
 
 {% block content %}
-	cadastro de empresa
+
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico"/>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+	<link rel="stylesheet" href="{{base_url()}}/css/avatarpreview.css">
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+	<div class="module">
+		<div class="module-head">
+			<h3>Cadastro de Empresa</h3>
+		</div>
+		<div class="module-body">
+			{% include 'templates/partials/flash.twig' %}
+			<br/>
+
+			<form class="form-horizontal row-fluid">
+				<div class="head">
+					<h3>Informações:</h3>
+				</div>
+
+				<div class="control-group">
+					<div class="controls">
+						<h4>Logo empresa:</h4>
+						<div class="avatar-upload">
+							<div class="avatar-edit">
+								<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"/>
+								<label for="imageUpload"></label>
+							</div>
+							<div class="avatar-preview">
+								<div id="imagePreview" style="background-image: url(https://ctt.trains.com/sitefiles/images/no-preview-available.png);"></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!--fim preview-->
+				<div class="control-group">
+					<label class="control-label" for="inputname">Nome:</label>
+					<div class="controls">
+						<input type="text" id="name" placeholder="Nome fantasia da Empresa.." class="span8">
+
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="basicinput">Setor</label>
+					<div class="controls">
+						<select tabindex="1" data-placeholder="Select here.." class="span8">
+							<option value="">Selecione o Setor..</option>
+							<option value="Category 1">Alimentos</option>
+							<option value="Category 2">Atacadista e varejista</option>
+							<option value="Category 3">Third Row</option>
+							<option value="Category 4">Fourth Row</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputstreet">Endereço:</label>
+					<div class="controls">
+						<input type="text" id="endereco" placeholder="exemplo: R. Aviário, 448 – Aviário, Rio Branco – AC, 69900-854" class="span8">
+
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputsite">Site:</label>
+					<div class="controls">
+						<input type="text" id="endereco" placeholder="Link do site..." class="span8">
+
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputemail">Email:</label>
+					<div class="controls">
+						<input type="email" id="telefone" placeholder="Email de Contato..." class="span8">
+
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputcontact">Telefone:</label>
+					<div class="controls">
+						<input type="tel" id="telefone" placeholder="Número de Contato..." class="span8">
+
+					</div>
+				</div>
+
+				{# MAPA #}
+				<div class="control-group">
+					<h4>Marque no Mapa o endereço da empresa</h4>
+					<div id="mapid" style="height: 400px;"></div>
+				</div>
+				<br>
+				<br>
+
+				<div class="head">
+					<h3>Redes Sociais:</h3>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputfacebook">Facebook:</label>
+					<div class="controls">
+						<input type="tel" id="telefone" placeholder="Link do Facebook" class="span8">
+
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputfacebook">Instagram:</label>
+					<div class="controls">
+						<input type="tel" id="telefone" placeholder="Link do Instagram" class="span8">
+
+					</div>
+				</div>
+
+				<div class="control-group ">
+					<button type="submit" class="btn btn-primary btn-large">Cadastrar Empresa</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="{{base_url()}}/js/mapa.js"></script>
+
 {% endblock %}
