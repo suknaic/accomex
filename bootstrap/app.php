@@ -94,6 +94,14 @@ $container['EmpresaController'] = function ($container) {
 	return new \App\Controllers\Dash\EmpresaController($container);
 };
 
+$container['ProdutoController'] = function ($container) {
+	return new \App\Controllers\Dash\ProdutoController($container);
+};
+
+$container['MensagensController'] = function ($container) {
+	return new \App\Controllers\Dash\MensagensController($container);
+};
+
 // add Slim CSRF
 $container['csrf'] = function ($container) {
 	return new \Slim\Csrf\Guard;
