@@ -31,9 +31,6 @@ $app->group('', function () {
 	$this->get('/painel/cadastro-produto', 'ProdutoController:index')
 		->setName('auth.painel.cproduto');
 
-	//ROTAS SEGMENTOS
-	$this->get('/painel/cadastro-setor', '')->setName('auth.painel.csegmento');
-
 	//ROTAS DE MENSAGENS DO SISTEMA
 	$this->get('/painel/mensagens', 'MensagensController:index')
 		->setName('auth.painel.mensagens');
@@ -46,6 +43,9 @@ $app->group('', function () {
 	$this->get('/painel/usuarios', 'UsuariosController:index')->setName('auth.painel.users');
 	$this->get('/painel/perfil-usuaril', 'UsuarioDetailController:index')
 		->setName('auth.painel.user-detail');
+
+	// ROTAS DE SETOR E SEGMENTO
+	$this->get('/painel/setor-segmento', 'SetorSegmentoController:index')->setName('auth.painel.setorsegmento');
 
 
 	// signout

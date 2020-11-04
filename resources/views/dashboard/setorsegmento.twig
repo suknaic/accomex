@@ -1,0 +1,50 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+
+
+	<link rel="stylesheet" href="{{base_url()}}/css/produtopreview.css">
+
+	<div class="module">
+		<div class="module-head">
+			<h3>Cadastro Setor | Segmento</h3>
+		</div>
+		<div class="module-body">
+			{% include 'templates/partials/flash.twig' %}
+			<br/>
+
+			<form class="form-horizontal row-fluid">
+
+
+				<div class="control-group">
+					<label class="control-label" for="inputname">Nome:</label>
+					<div class="controls">
+						<input type="text" id="name" placeholder="Nome do setor ou segmento.." class="span8">
+
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Selecione:</label>
+					<div class="controls">
+						<label class="radio inline">
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="setor">
+							Setor
+						</label>
+						<label class="radio inline">
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="segmento">
+							Segmento
+						</label>
+
+					</div>
+				</div>
+
+
+				<div class="control-group ">
+					<button type="submit" class="btn btn-primary btn-large">Cadastrar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="{{base_url()}}/js/produtopreview.js"></script>
+{% endblock %}
