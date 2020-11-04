@@ -28,7 +28,7 @@ class PasswordController extends Controller
 		$this->auth->user()->setPassword($request->getParam('password'));
 
 		// flash message
-		$this->flash->addMessage('success', 'Your password has been updated');
-		return $response->withRedirect($this->router->pathFor('home'));
+		$this->flash->addMessage('success', 'Sua Senha secreta foi alterada!');
+		return $response->withRedirect($this->router->pathFor('auth.painel'));
 	}
 }
