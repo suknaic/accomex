@@ -12,7 +12,7 @@ class AuthController extends Controller
 	{
 		$this->auth->logout();
 		// flash message
-		$this->flash->addMessage('error', 'You have been signed out');
+		$this->flash->addMessage('error', 'Você foi desconectado.');
 		return $response->withRedirect($this->router->pathFor('home'));
 	}
 	// signin controller ENTREGA A PAGINA DE LOGIN
