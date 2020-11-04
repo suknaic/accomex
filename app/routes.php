@@ -27,8 +27,16 @@ $app->group('', function () {
 	//ROTAS EMPRESA 
 	$this->get('/painel/cadastro-empresa', 'EmpresaController:index')->setName('auth.painel.cempresa');
 	// ROTAS PRODUTO
-	$this->get('/painel/cadastro-produto', '')->setName('auth.painel.cproduto');
+	$this->get('/painel/cadastro-produto', 'ProdutoController:index')->setName('auth.painel.cproduto');
 
+	//ROTAS SEGMENTOS
+	$this->get('/painel/cadastro-setor', '')->setName('auth.painel.csegmento');
+
+	//ROTAS DE MENSAGENS DO SISTEMA
+	$this->get('/painel/mensagens', 'MensagensController:index')->setName('auth.painel.mensagens');
+
+	// ROTAS DE ATIVIDADES DO SISTEMA
+	$this->get('/painel/atividades', '')->setName('auth.painel.atividades');
 
 	// signout
 	$this->get('/painel/signout', 'AuthController:getSignOut')->setName('auth.signout');

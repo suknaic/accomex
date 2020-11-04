@@ -6,14 +6,14 @@
 			</a>
 		</li>
 		<li>
-			<a href="message.html">
+			<a href="{{path_for('auth.painel.mensagens')}}">
 				<i class="menu-icon icon-inbox"></i>Mensagens
 				<b class="label green pull-right">
 					11</b>
 			</a>
 		</li>
 		<li>
-			<a href="task.html">
+			<a href="{{path_for('auth.painel.atividades')}}}">
 				<i class="menu-icon icon-tasks"></i>Atividades
 				<b class="label orange pull-right">
 					19</b>
@@ -32,13 +32,14 @@
 				<li>
 					<a href="{{path_for('auth.painel.cempresa')}}">
 						<i class="icon-inbox"></i>
-						Cadastrar Nova
+						Cadastrar Nova Empresa
 					</a>
 				</li>
+
 				<li>
 					<a href="other-user-profile.html">
 						<i class="icon-inbox"></i>
-						Ver Todas Empresas
+						Gerenciar Empresas
 					</a>
 				</li>
 			</ul>
@@ -51,15 +52,36 @@
 			</a>
 			<ul id="toggleproduct" class="collapse unstyled">
 				<li>
-					<a href="other-login.html">
+					<a href="{{path_for('auth.painel.cproduto')}}">
 						<i class="icon-inbox"></i>
-						Cadastrar Novo
+						Cadastrar Novo Produto
 					</a>
 				</li>
 				<li>
 					<a href="other-user-profile.html">
 						<i class="icon-inbox"></i>
-						Ver Todos Produtos
+						Gerenciar Produtos
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a class="collapsed" data-toggle="collapse" href="#togglesetor">
+				<i class="menu-icon icon-flag"></i>
+				<i class="icon-chevron-down pull-right"></i>
+				<i class="icon-chevron-up pull-right"></i>Setor | Segmento
+			</a>
+			<ul id="togglesetor" class="collapse unstyled">
+				<li>
+					<a href="{{path_for('auth.painel.csegmento')}}">
+						<i class="icon-inbox"></i>
+						Cadastrar Setor | Segmento
+					</a>
+				</li>
+				<li>
+					<a href="other-user-profile.html">
+						<i class="icon-inbox"></i>
+						Gerenciar Setor | Segmento
 					</a>
 				</li>
 			</ul>
