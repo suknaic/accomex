@@ -36,10 +36,15 @@ $app->group('', function () {
 	$this->get('/painel/mensagens', 'MensagensController:index')->setName('auth.painel.mensagens');
 
 	// ROTAS DE ATIVIDADES DO SISTEMA
-	$this->get('/painel/atividades', '')->setName('auth.painel.atividades');
+	$this->get('/painel/atividades', 'AtividadesController:index')->setName('auth.painel.task');
+
+	// ROTAS DE CONTROLE DE USUARIOS
+	$this->get('/painel/usuarios', 'UsuariosController:index')->setName('auth.painel.users');
+
 
 	// signout
 	$this->get('/painel/signout', 'AuthController:getSignOut')->setName('auth.signout');
+
 
 	// change password
 	$this->get('/painel/password/change', 'PasswordController:getChangePassword')->setName('auth.password.change');

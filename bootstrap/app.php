@@ -102,6 +102,14 @@ $container['MensagensController'] = function ($container) {
 	return new \App\Controllers\Dash\MensagensController($container);
 };
 
+$container['AtividadesController'] = function ($container) {
+	return new \App\Controllers\Dash\AtividadesController($container);
+};
+
+$container['UsuariosController'] = function ($container) {
+	return new \App\Controllers\Dash\UsuariosController($container);
+};
+
 // add Slim CSRF
 $container['csrf'] = function ($container) {
 	return new \Slim\Csrf\Guard;
