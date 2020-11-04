@@ -1,0 +1,190 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+	<div class="module message">
+		<div class="module-head">
+			<h3>Gerenciamento de Atividades</h3>
+		</div>
+		<div class="module-option clearfix">
+			<div class="pull-left">
+				Filter : &nbsp;
+				<div class="btn-group">
+					<button class="btn">Selecione a Atividade</button>
+					<button class="btn dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#">Todas</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="#">Empresas</a>
+						</li>
+						<li>
+							<a href="#">Produtos</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="module-body table">
+
+			<table class="table table-message">
+				<tbody>
+					<tr class="heading">
+						<td class="cell-icon"></td>
+						<td class="cell-title">Atividades do Sistema</td>
+						<td class="cell-status hidden-phone hidden-tablet">Status</td>
+						<td class="cell-time align-right">Data</td>
+					</tr>
+					<tr class="task">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>
+								<b style="font-size:15px;">Felipe
+								</b>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet">
+							<div class="alert-error">removeu</div>
+						</td>
+						<td class="cell-time align-right">15:30</td>
+					</tr>
+					<tr class="task">
+						<td class="cell-icon">
+							<i class="icon-checker"></i>
+						</td>
+						<td class="cell-title">
+							<div>
+								<b style="font-size:15px;">Felipe
+								</b>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet">
+							<div class=" alert-success">adicionou</div>
+						</td>
+						<td class="cell-time align-right">14:00</td>
+					</tr>
+					<tr class="task">
+						<td class="cell-icon">
+							<i class="icon-checker"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet">
+							<div class="alert-info">alterou</div>
+						</td>
+						<td class="cell-time align-right">11:30</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+					<tr class="task resolved">
+						<td class="cell-icon">
+							<i class="icon-checker high"></i>
+						</td>
+						<td class="cell-title">
+							<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</td>
+						<td class="cell-status hidden-phone hidden-tablet"></td>
+						<td class="cell-time align-right">15/OUT/2020</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</div>
+		<div class="module-foot"></div>
+	</div>
+
+{% endblock %}
