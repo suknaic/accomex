@@ -1,0 +1,350 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+	<div class="module">
+		<div class="module-body">
+			<div class="profile-head media">
+				<a href="#" class="media-avatar pull-left">
+					<img src="{{base_url()}}/images/logo/miragina.jpg">
+				</a>
+				<div class="media-body">
+					<h4>
+						Miragina
+						<small>Alimentos</small>
+					</h4>
+					<p class="profile-brief">
+
+						<ul style="list-style:none; margin:0px;padding:0px">
+							<li>
+								<i class="icon-street shaded"></i>
+								Endereço: R. Aviário, 448 – Aviário, Rio Branco – AC, 69900-854
+							</li>
+							<li>
+								<i class="icon-phone shaded"></i>
+								fone: (68) 3228-6177</li>
+
+							<li>
+								<i class="icon-mail shaded"></i>
+								E-mail: miragina@miragina.com.br</li>
+
+						</ul>
+					</p>
+
+				</div>
+			</div>
+			<ul class="profile-tab nav nav-tabs">
+				<li class="active">
+					<a href="#activity" data-toggle="tab">Dados Perfil</a>
+				</li>
+				<li>
+					<a href="#friends" data-toggle="tab">Produtos Cadastrados</a>
+				</li>
+			</ul>
+			<div class="profile-tab-content tab-content">
+				<div class="tab-pane fade active in" id="activity">
+
+					<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+					<link rel="stylesheet" href="{{base_url()}}/css/avatarpreview.css">
+					<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+					<div class="module">
+
+						<div class="module-body">
+							{% include 'templates/partials/flash.twig' %}
+							<br/>
+
+							<form class="form-horizontal row-fluid">
+								<div class="control-group">
+									<div class="controls">
+										<h4>Logo empresa:</h4>
+										<div class="avatar-upload">
+											<div class="avatar-edit">
+												<input type='file' id="01" accept=".png, .jpg, .jpeg"/>
+												<label for="01"></label>
+											</div>
+											<div class="avatar-preview">
+												<div id="imagePreview_01" style="background-image: url({{base_url()}}/images/logo/miragina.jpg);"></div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!--fim preview-->
+								<div class="control-group">
+									<label class="control-label" for="inputname">Nome:</label>
+									<div class="controls">
+										<input type="text" id="name" value="miragina" class="span8">
+
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="basicinput">Setor</label>
+									<div class="controls">
+										<select tabindex="1" data-placeholder="Select here.." class="span8">
+											<option value="">Selecione o Setor..</option>
+											<option value="Category 1" selected>Alimentos</option>
+											<option value="Category 2">Atacadista e varejista</option>
+											<option value="Category 3">Third Row</option>
+											<option value="Category 4">Fourth Row</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label" for="inputstreet">Endereço:</label>
+									<div class="controls">
+										<input type="text" id="endereco" value="R. Aviário, 448 – Aviário, Rio Branco – AC, 69900-854" class="span8">
+
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputsite">Site:</label>
+									<div class="controls">
+										<input type="text" id="endereco" value="www.miragina.com.br" class="span8">
+
+									</div>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label" for="inputemail">Email:</label>
+									<div class="controls">
+										<input type="email" id="telefone" value="miragina@miragina.com.br" class="span8">
+
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputcontact">Telefone:</label>
+									<div class="controls">
+										<input type="tel" id="telefone" value="(68) 3228-6177" class="span8">
+
+									</div>
+								</div>
+
+								{# MAPA #}
+								<div class="control-group">
+									<h4>Marque no Mapa o endereço da empresa</h4>
+									<div id="mapid" style="height: 400px;"></div>
+								</div>
+								<br>
+								<br>
+
+								<div class="head">
+									<h3>Redes Sociais:</h3>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label" for="inputfacebook">Facebook:</label>
+									<div class="controls">
+										<input type="tel" id="telefone" value="http://facebook.com/miragina" class="span8">
+
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputfacebook">Instagram:</label>
+									<div class="controls">
+										<input type="tel" id="telefone" value="http://instagram.com/miragina" class="span8">
+
+									</div>
+								</div>
+
+								<div class="control-group "></div>
+								<button type="sub mit" class="btn btn-primary btn-large">Atualizar Cadastro da Empresa</button>
+							</form>
+						</div>
+					</div>
+
+					<script src="{{base_url()}}/js/mapa.js"></script>
+
+				</div>
+				<div class="tab-pane fade" id="friends">
+					<div class="module-option clearfix">
+						<form>
+							<div class="input-append pull-left">
+								<input type="text" class="span3" placeholder="Pesquise pelo Nome do Produto...">
+								<button type="submit" class="btn">
+									<i class="icon-search"></i>
+									pesquisar
+								</button>
+							</div>
+						</form>
+
+						<div class="btn-group pull-right" data-toggle="buttons-radio">
+							<button type="button" class="btn btn-large btn-success">
+								CADASTRAR NOVO</button>
+
+						</div>
+
+					</div>
+					<div class="module-body">
+						<div class="row-fluid">
+							<div class="span6">
+								<div class="media user">
+									<a class="media-avatar pull-left" href="#">
+										<img src="{{base_url()}}/images/produtos/biscoito.jpg">
+									</a>
+									<div class="media-body">
+										<h3 class="media-title">
+											Biscoito Salgado
+										</h3>
+										<p>
+											<small class="muted">Alimento | Segmento</small>
+										</p>
+										<div class="media-option btn-group ">
+											<button class="btn btn-small btn-info">
+												<i class="icon-edit"></i>
+												editar
+											</button>
+											<button class="btn btn-small btn-danger">
+												<i class="icon-trash"></i>
+												excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="span6">
+								<div class="media user">
+									<a class="media-avatar pull-left" href="#">
+										<img src="{{base_url()}}/images/produtos/oleo.jpg">
+									</a>
+									<div class="media-body">
+										<h3 class="media-title">
+											Óleo de Castanha do Brasil
+										</h3>
+										<p>
+											<small class="muted">Alimento | Segmento</small>
+										</p>
+										<div class="media-option btn-group ">
+											<button class="btn btn-small btn-info">
+												<i class="icon-edit"></i>
+												editar
+											</button>
+											<button class="btn btn-small btn-danger">
+												<i class="icon-trash"></i>
+												excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!--/.row-fluid-->
+						<div class="row-fluid">
+							<div class="span6">
+								<div class="media user">
+									<a class="media-avatar pull-left" href="#">
+										<img src="{{base_url()}}/images/produtos/biscoito.jpg">
+									</a>
+									<div class="media-body">
+										<h3 class="media-title">
+											Biscoito Salgado
+										</h3>
+										<p>
+											<small class="muted">Alimento | Segmento</small>
+										</p>
+										<div class="media-option btn-group ">
+											<button class="btn btn-small btn-info">
+												<i class="icon-edit"></i>
+												editar
+											</button>
+											<button class="btn btn-small btn-danger">
+												<i class="icon-trash"></i>
+												excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="span6">
+								<div class="media user">
+									<a class="media-avatar pull-left" href="#">
+										<img src="{{base_url()}}/images/produtos/oleo.jpg">
+									</a>
+									<div class="media-body">
+										<h3 class="media-title">
+											Óleo de Castanha do Brasil
+										</h3>
+										<p>
+											<small class="muted">Alimento | Segmento</small>
+										</p>
+										<div class="media-option btn-group ">
+											<button class="btn btn-small btn-info">
+												<i class="icon-edit"></i>
+												editar
+											</button>
+											<button class="btn btn-small btn-danger">
+												<i class="icon-trash"></i>
+												excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!--/.row-fluid-->
+						<div class="row-fluid">
+							<div class="span6">
+								<div class="media user">
+									<a class="media-avatar pull-left" href="#">
+										<img src="{{base_url()}}/images/produtos/biscoito.jpg">
+									</a>
+									<div class="media-body">
+										<h3 class="media-title">
+											Biscoito Salgado
+										</h3>
+										<p>
+											<small class="muted">Alimento | Segmento</small>
+										</p>
+										<div class="media-option btn-group ">
+											<button class="btn btn-small btn-info">
+												<i class="icon-edit"></i>
+												editar
+											</button>
+											<button class="btn btn-small btn-danger">
+												<i class="icon-trash"></i>
+												excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="span6">
+								<div class="media user">
+									<a class="media-avatar pull-left" href="#">
+										<img src="{{base_url()}}/images/produtos/oleo.jpg">
+									</a>
+									<div class="media-body">
+										<h3 class="media-title">
+											Óleo de Castanha do Brasil
+										</h3>
+										<p>
+											<small class="muted">Alimento | Segmento</small>
+										</p>
+										<div class="media-option btn-group ">
+											<button class="btn btn-small btn-info">
+												<i class="icon-edit"></i>
+												editar
+											</button>
+											<button class="btn btn-small btn-danger">
+												<i class="icon-trash"></i>
+												excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!--/.row-fluid-->
+						{% include 'templates/partials/loadingPagination.twig' %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.module-body-->
+	</div>
+	<!--/.module-->
+{% endblock %}

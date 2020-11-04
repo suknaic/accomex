@@ -110,6 +110,10 @@ $container['UsuariosController'] = function ($container) {
 	return new \App\Controllers\Dash\UsuariosController($container);
 };
 
+$container['UsuarioDetailController'] = function ($container) {
+	return new \App\Controllers\Dash\UsuarioDetailController($container);
+};
+
 // add Slim CSRF
 $container['csrf'] = function ($container) {
 	return new \Slim\Csrf\Guard;

@@ -5,12 +5,12 @@
 				<i class="menu-icon icon-dashboard"></i>INÍCIO
 			</a>
 		</li>
-		<li>
-			<a href="{{path_for('auth.painel.users')}}">
-				<i class="menu-icon icon-user"></i>Usuários
-
-			</a>
-		</li>
+		{# <li>
+							<a href="{{path_for('auth.painel.users')}}">
+								<i class="menu-icon icon-user"></i>Usuários
+				
+							</a>
+						</li> #}
 		<li>
 			<a href="{{path_for('auth.painel.mensagens')}}">
 				<i class="menu-icon icon-inbox"></i>Mensagens
@@ -44,7 +44,7 @@
 				</li>
 
 				<li>
-					<a href="other-user-profile.html">
+					<a href="{{path_for('auth.painel.users')}}">
 						<i class="icon-inbox"></i>
 						Gerenciar Empresas
 					</a>

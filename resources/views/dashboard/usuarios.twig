@@ -8,12 +8,32 @@
 		</div>
 		<div class="module-option clearfix">
 			<form>
-				<div class="input-append pull-left">
-					<input type="text" class="span3" placeholder="Pesquise Pelo Nome...">
-					<button type="submit" class="btn">
+				<div class="input-append">
+					<input type="text" class="span4" placeholder="Pesquisar..">
+
+					<select tabindex="1" data-placeholder="Select here.." class="span2">
+						<option value="">Setor..</option>
+						<option value="Category 1">Alimentos</option>
+						<option value="Category 2">Atacadista e varejista</option>
+						<option value="Category 3">Third Row</option>
+						<option value="Category 4">Fourth Row</option>
+					</select>
+
+					<select tabindex="1" data-placeholder="Select here.." class="span2">
+						<option value="">Segmento..</option>
+						<option value="Category 1">Alimentos</option>
+						<option value="Category 2">Atacadista e varejista</option>
+						<option value="Category 3">Third Row</option>
+						<option value="Category 4">Fourth Row</option>
+					</select>
+					<button type="submit" class="btn btn-info">
 						<i class="icon-search"></i>
+						Pesquisar
 					</button>
 				</div>
+
+				<div class="input-append"></div>
+
 			</form>
 
 		</div>
@@ -25,171 +45,37 @@
 						<a class="media-avatar pull-left" href="#">
 							<img src="{{base_url()}}/images/logo/miragina.jpg">
 						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
 
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="span6">
+						<div class="media-body">
+							<h3 class="media-title">
+								Miragina
+							</h3>
+							<p>
+								<small class="muted">Alimentos</small><br>
+								<small class="muted">
+									<b>5</b>
+									Produtos Cadastrados</small>
 
-					<div class="media user">
-						<a class="media-avatar pull-left" href="#">
-							<img src="{{base_url()}}/images/logo/miragina.jpg">
-						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
+							</p>
+						</div>
 
-							</div>
-						</a>
+						<div class="media-option btn-group ">
+							<a href="{{path_for('auth.painel.user-detail')}}" class="btn btn-small btn-info">
+								<i class="icon-edit"></i>
+								editar
+							</a>
+							<a href="#" class="btn btn-small btn-danger">
+								<i class="icon-trash"></i>
+								excluir
+							</a>
+						</div>
 					</div>
 				</div>
 
 			</div>
-			<!--/.row-fluid-->
-			<div class="row-fluid">
-				<div class="span6">
+			<br>
 
-					<div class="media user">
-						<a class="media-avatar pull-left" href="#">
-							<img src="{{base_url()}}/images/logo/miragina.jpg">
-						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
-
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="span6">
-
-					<div class="media user">
-						<a class="media-avatar pull-left" href="#">
-							<img src="{{base_url()}}/images/logo/miragina.jpg">
-						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
-
-							</div>
-						</a>
-					</div>
-				</div>
-
-			</div>
-			<!--/.row-fluid-->
-			<div class="row-fluid">
-				<div class="span6">
-
-					<div class="media user">
-						<a class="media-avatar pull-left" href="#">
-							<img src="{{base_url()}}/images/logo/miragina.jpg">
-						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
-
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="span6">
-
-					<div class="media user">
-						<a class="media-avatar pull-left" href="#">
-							<img src="{{base_url()}}/images/logo/miragina.jpg">
-						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
-
-							</div>
-						</a>
-					</div>
-				</div>
-
-			</div>
-			<!--/.row-fluid-->
-			<div class="row-fluid">
-				<div class="span6">
-
-					<div class="media user">
-						<a class="media-avatar pull-left" href="#">
-							<img src="{{base_url()}}/images/logo/miragina.jpg">
-						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
-
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="span6">
-
-					<div class="media user">
-						<a class="media-avatar pull-left" href="#">
-							<img src="{{base_url()}}/images/logo/miragina.jpg">
-						</a>
-						<a href="#">
-							<div class="media-body">
-								<h3 class="media-title">
-									Miragina
-								</h3>
-								<p>
-									<small class="muted">Alimentos</small>
-								</p>
-
-							</div>
-						</a>
-					</div>
-				</div>
-
-			</div>
-			<!--/.row-fluid-->
-			<br/>
-
-
-			{% include 'templates/partials/pagination.twig' %}
+			{% include 'templates/partials/loadingPagination.twig' %}
 		</div>
 	</div>
 {% endblock %}
